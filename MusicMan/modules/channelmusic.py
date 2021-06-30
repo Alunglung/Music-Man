@@ -306,9 +306,9 @@ async def m_cb(b, cb):
                     InlineKeyboardButton("⏭", "cskip"),
                 ],
                 [
-                    InlineKeyboardButton("Playlist 📖", "cplaylist"),
+                    InlineKeyboardButton(" Playlist ", "cplaylist"),
                 ],
-                [InlineKeyboardButton("❌ Close", "ccls")],
+                [InlineKeyboardButton(" Close ", "ccls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -451,7 +451,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton(" Playlist", callback_data="cplaylist"),
                     InlineKeyboardButton(" Channel ", url="https://t.me/Daysmusicchannel"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="ccls")],
+                [InlineKeyboardButton(text=" Close ", callback_data="ccls")],
             ]
         )
         file_name = get_file_name(audio)
@@ -501,7 +501,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(text=" Owner ", url="https://t.me/alunngg"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="ccls")],
+                [InlineKeyboardButton(text=" Close ", callback_data="ccls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -540,7 +540,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton(" playlist ", callback_data="playlist"),
                     InlineKeyboardButton(" Channel", url="https://t.me/Daysmusicchannel"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text=" Close ", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -557,7 +557,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"🎼 **Lagu yang Anda minta Sedang Antri di posisi** `{position}`",
+            caption=f"**Lagu yang Anda minta Sedang Antri di posisi** `{position}`",
             reply_markup=keyboard,
         )
     else:
@@ -573,7 +573,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="🎼️ **Sedang Memutar Lagu Permintaan dari** {}".format(
+            caption="**Sedang Memutar Lagu Permintaan dari** {}".format(
                 message.from_user.mention()
             ),
         )
@@ -669,10 +669,10 @@ async def deezer(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton(" playlist ", callback_data="playlist"),
+                    InlineKeyboardButton(" Channel ", url="https://t.me/Daysmusicchannel"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text=" Close ", callback_data="cls")],
             ]
         )
     file_path = await convert(wget.download(url))
@@ -688,7 +688,7 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"🎼 **Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
+        await res.edit_text(f"**Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
     else:
         await res.edit_text(f"✯{bn}✯=▶️ Playing.....")
 
@@ -798,10 +798,10 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton(" Daftar Putar", callback_data="playlist"),
+                    InlineKeyboardButton(" Channel", url="https://t.me/Daysmusicchannel"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text=" Close ", callback_data="cls")],
             ]
         )
     file_path = await convert(wget.download(slink))
