@@ -193,9 +193,9 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
-                InlineKeyboardButton("📖 Playlist", "playlist"),
+                InlineKeyboardButton(" Playlist ", "playlist"),
             ],
-            [InlineKeyboardButton("🗑 Close", "cls")],
+            [InlineKeyboardButton(" Close ", "cls")],
         ]
     )
     return mar
@@ -541,10 +541,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton(" playlist ", callback_data="playlist"),
+                    InlineKeyboardButton(" Channel ", url="https://t.me/Daysmusicchannel"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text=" Close ", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
@@ -588,10 +588,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton(" Playlist ", callback_data="playlist"),
+                    InlineKeyboardButton(" Channel ", url="https://t.me/Daysmusicchannel"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text=" Close ", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -634,7 +634,7 @@ async def play(_, message: Message):
                         InlineKeyboardButton("4️⃣", callback_data=f'plll 3|{query}|{user_id}'),
                         InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                    [InlineKeyboardButton(text=" Close ", callback_data="cls")],
                 ]
             )       
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
@@ -667,10 +667,10 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton(" Playlist ", callback_data="playlist"),
+                    InlineKeyboardButton(" Channel ", url="https://t.me/Daysmusicchannel"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text=" Close ", callback_data="cls")],
             ]
         )
             requested_by = message.from_user.first_name
@@ -687,8 +687,8 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
+            caption = f"**Judul:** [{title[:60]}]({url})\n**Durasi:** {duration}\n**Status:** Antrian Ke `{position}`\n" \
+                    + f"**Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard)
     else:
         chat_id = get_chat_id(message.chat)
@@ -706,8 +706,8 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
+            caption = f"**Judul:** [{title[:60]}]({url})\n**Durasi:** {duration}\n**Status:** Sedang Memutar\n" \
+                    + f"**Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard)
 
     os.remove("final.png")
@@ -805,10 +805,10 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton(" Playlist ", callback_data="playlist"),
+                    InlineKeyboardButton(" Channel ", url="https://t.me/Daysmusicchannel"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text=" Close ", callback_data="cls")],
             ]
         )
     requested_by = message.from_user.first_name
@@ -825,8 +825,8 @@ async def ytplay(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
+            caption = f"**Judul:** [{title[:60]}]({url})\n**Durasi:** {duration}\n**Status:** Antrian Ke `{position}`\n" \
+                    + f"**Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -847,8 +847,8 @@ async def ytplay(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
+            caption = f"**Judul:** [{title[:60]}]({url})\n**Durasi:** {duration}\n**Status:** Sedang Memutar\n" \
+                    + f"**Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard,)
         os.remove("final.png")
         return await lel.delete()
@@ -940,7 +940,7 @@ async def deezer(client: Client, message_: Message):
     
     keyboard = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton(text="⛑ Channel", url="https://t.me/Lunatic0de")],
+            [InlineKeyboardButton(text=" Channel", url="https://t.me/Daysmusicchannel")],
         ]
     )
     file_path = await convert(wget.download(url))
@@ -956,9 +956,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"🎼 **Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
+        await res.edit_text(f"**Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
     else:
-        await res.edit_text(f"🎼️ **Playing...**")
+        await res.edit_text(f"**Playing...**")
 
         que[chat_id] = []
         qeue = que.get(chat_id)
@@ -979,7 +979,7 @@ async def deezer(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"🎼️ **Sedang Memutar Lagu** [{title}]({url}) **Via Deezer**",
+        caption=f"**Sedang Memutar Lagu** [{title}]({url}) **Via Deezer**",
     )
     os.remove("final.png")
 
@@ -1035,10 +1035,10 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton(" Daftar Putar ", callback_data="playlist"),
+                    InlineKeyboardButton(" Channel ", url="https://t.me/Daysmusicchannel"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text=" Close ", callback_data="cls")],
             ]
         )
     requested_by = useer_name
@@ -1058,7 +1058,7 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption=f"🎼 **Lagu yang** {r_by.mention} **minta Sedang Antri di posisi {position}**",
+            caption=f"**Lagu yang** {r_by.mention} **minta Sedang Antri di posisi {position}**",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -1080,7 +1080,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"🎼️ **Sedang Memutar Lagu Permintaan dari** {r_by.mention}",
+            caption=f"**Sedang Memutar Lagu Permintaan dari** {r_by.mention}",
         )
         
         os.remove("final.png")
