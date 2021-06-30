@@ -35,6 +35,7 @@ Memutar Musik.
 Mendownload Lagu.
 Mencari Lagu Yang ingin di Putar atau di Download.
 
+❓Bagaimana cara menggunakannya
 Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap saya
 
 ❃ Owner  [Lunglung](https://t.me/alunngg)
@@ -53,12 +54,12 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
                         "➕ Tambahkan saya ke Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "💬 Channel Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+                        " Channel Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
-                        "⛑ Group Support", url=f"https://t.me/{SUPPORT_GROUP}")
+                        " Donasi ", url="https://t.me/https://saweria.co/ridhoartha")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")
+                        " OWNER ", url="https://t.me/alunngg")
                 ]
             ]
         ),
@@ -105,16 +106,16 @@ def map(pos):
             ],
             [
                 InlineKeyboardButton(
-                    text='💬 Channel Updates',
+                    text='Channel Updates',
                     url=f"https://t.me/{UPDATES_CHANNEL}",
                 ),
                 InlineKeyboardButton(
-                    text='⛑ Group Support', url=f"https://t.me/{SUPPORT_GROUP}"
+                    text=' Donasi ', url="https://saweria.co/ridhoartha"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text='🛠 Source Code 🛠', url=f"https://{SOURCE_CODE}"
+                    text=' OWNER ', url="https://t.me/alunngg"
                 )
             ],
             [InlineKeyboardButton(text='«', callback_data=f"help+{pos-1}")],
@@ -164,7 +165,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "📜 Cara Menggunakan BOT 📜", url="https://t.me/Lunatic0de/20"
+                        "CARA PAKE BOT", url="https://t.me/Daysmusicchannel/4"
                     )
                 ]
             ]
@@ -183,10 +184,10 @@ async def reload(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Group Support", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "Channel", url="https://t.me/Daysmusicchannel"
                     ),
                     InlineKeyboardButton(
-                        "Owner", url=f"https://t.me/mrismanaziz"
+                        "Owner", url=f"https://t.me/alunngg"
                     )
                 ]
             ]
