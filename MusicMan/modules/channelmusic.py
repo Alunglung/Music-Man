@@ -499,8 +499,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton(" Channel ", url="https://t.me/Daysmusicchannel"),
                 ],
                 [
-                    InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                    InlineKeyboardButton(text=" Owner ", url="https://t.me/alunngg"),
                 ],
                 [InlineKeyboardButton(text="❌ Close", callback_data="ccls")],
             ]
@@ -538,8 +537,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton(" playlist ", callback_data="playlist"),
+                    InlineKeyboardButton(" Channel", url="https://t.me/Daysmusicchannel"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
