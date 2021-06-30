@@ -448,8 +448,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="cplaylist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="cmenu"),
+                    InlineKeyboardButton(" Playlist", callback_data="cplaylist"),
+                    InlineKeyboardButton(" Channel ", url="https://t.me/Daysmusicchannel"),
                 ],
                 [InlineKeyboardButton(text="❌ Close", callback_data="ccls")],
             ]
@@ -495,8 +495,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="cplaylist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="cmenu"),
+                    InlineKeyboardButton(" Playlist ", callback_data="cplaylist"),
+                    InlineKeyboardButton(" Channel ", url="https://t.me/Daysmusicchannel"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
